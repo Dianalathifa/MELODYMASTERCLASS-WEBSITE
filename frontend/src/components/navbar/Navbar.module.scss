@@ -1,0 +1,132 @@
+// RegisterForm.module.scss
+
+@use "../../scss/abstracts/" as *;
+
+.html {
+  background-color: var(--bgc);
+}
+
+.container {
+  @include flex();
+  min-height: 100vh;
+  background-color: var(--bgc);
+  .keyPic {
+    width: 900px;
+    min-width: 500px;
+    order: 1;
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+.loginBox {
+  @include flex();
+  flex-direction: column;
+  width: 400px;
+  padding: 5rem 3rem 4rem;
+  background-color: #faf9fa;
+  color: #34373c;
+  border-radius: $mediumBorderRadius;
+  box-shadow: $mainBoxShadow;
+
+  .logo {
+    margin-top: -2rem;
+    width: 200px;
+  }
+
+  .title {
+    font-size: $fontSizeHeadlineMedium;
+    line-height: 50px;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin: -2rem 0 4rem;
+  }
+
+  & input,
+  & label,
+  & a {
+    background-color: #f9f9fa !important;
+    color: #424750;
+  }
+
+  .errorMessage {
+    position: relative;
+    font-size: 14px;
+    color: red;
+    top: -25px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+  .fixed-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust the padding as needed */
+  }
+  
+  .nav-logo-container img {
+    height: 40px; /* Adjust the height of the logo as needed */
+  }
+  
+  .navbar-links-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin-right: 10px; /* Adjust the margin between links as needed */
+    color: white; /* Set the text color for the links */
+    text-decoration: none; /* Remove default underline style */
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #AA72C3; // Ganti dengan warna ungu yang diinginkan
+    color: #fff; // Warna teks putih
+    border: none; // Hapus border jika tidak diperlukan
+    transition: background-color 0.3s ease; // Efek transisi
+  }
+
+  button:hover {
+    background-color: #8C58A3; // Warna ungu saat hover
+  }
+
+  .forgat_pass {
+    margin: 1rem 0;
+    display: inline-block;
+    color: gray;
+    font-size: 14px;
+  }
+
+  .checkbox {
+    @include flex(center, flex-start);
+
+    input {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      padding: 6px;
+      border-radius: 8px;
+    }
+
+    label {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.rtl {
+  font-family: iranyekan, "IRANSans", "Tahoma";
+  direction: rtl;
+  text-align: right;
+
+  label {
+    left: auto;
+    right: 10px;
+  }
+}

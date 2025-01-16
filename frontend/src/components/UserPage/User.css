@@ -1,0 +1,69 @@
+/* user.css */
+
+/* Styling for the entire page */
+.body-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.flex {
+    width: 200%;
+    max-width: 1500px;
+}
+
+.col-10 {
+    max-width: 100%; /* Responsif */
+    margin: 100;
+}
+
+/* CustomTable Styling */
+.CTable {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #fff; /* Warna teks pada sel tabel */
+}
+
+.CTable thead {
+    background-color: #6f42c1; /* Warna latar header tabel */
+}
+
+.CTable thead th {
+    color: #fff; /* Warna teks header tabel */
+}
+
+.CTable tbody tr:hover {
+    background-color: #f2f2f2; /* Warna latar saat hover */
+}
+
+.CTable tbody tr td:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.CButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.CButton:hover {
+    background-color: #f2f2f2; /* Warna latar saat hover */
+}
+
+.CButton i {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .flex {
+        width: 100%;
+    }
+    
+    .col-10 {
+        max-width: 100%;
+    }
+}

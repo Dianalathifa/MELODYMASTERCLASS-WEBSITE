@@ -1,0 +1,798 @@
+/* Gaya dasar untuk semua ukuran layar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Reem Kufi", sans-serif !important;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  
+  /* Menambahkan padding ke sisi kanan */
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+}
+.fixed-navbar {
+  position: fixed;
+  top: 0; /* Anda bisa menggunakan top: 0 untuk meletakkan navbar di atas layar */
+  left: 0;
+  right: 0;
+  background-color: white; /* Ganti dengan warna latar belakang yang Anda inginkan */
+  z-index: 100; /* Atur z-index untuk memastikan navbar selalu tampil di atas konten */
+  /* Tambahkan gaya lain sesuai kebutuhan Anda */
+}
+
+.navbar-menu-container {
+  display: none;
+}
+.navbar-links-container a {
+  margin-right: 3rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.primary-button {
+  padding: 0.9rem 1.75rem;
+  background-color: #AA72C3;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.navbar-cart-icon {
+  font-size: 1.15rem;
+}
+.primary-button:hover {
+  background-color: #AA72C3;
+}
+.navbar-menu-container svg {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* Gaya untuk layar dengan lebar maksimal 1000px */
+@media (max-width: 1000px) {
+  .navbar-links-container {
+    display: none;
+  }
+  .navbar-menu-container {
+    display: flex;
+    flex-direction: column; /* Menampilkan menu secara vertikal */
+  }
+}
+
+/* Gaya untuk layar dengan lebar maksimal 800px */
+@media (max-width: 800px) {
+  .navbar-links-container a {
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  .navbar-menu-container {
+    display: none;
+  }
+}
+
+/* Gaya untuk layar dengan lebar maksimal 600px */
+@media (max-width: 600px) {
+  .navbar-links-container {
+    display: none;
+  }
+  .navbar-menu-container {
+    display: flex;
+    flex-direction: column; /* Menampilkan menu secara vertikal */
+  }
+}
+
+
+/* Gaya untuk bagian banner halaman depan */
+.home-banner-container {
+  position: relative;
+  display: flex;
+  padding-top: 3rem;
+}
+
+.home-bannerImage-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  max-width: 110%; /* Ubah nilai sesuai kebutuhan Anda, misalnya 110% untuk elemen yang lebih besar */
+  max-height: 100vh; /* Menggunakan 100% tinggi viewport untuk ketinggian */
+}
+
+.home-bannerImage-container img {
+  width: 100%; /* Ubah nilai sesuai kebutuhan Anda untuk ukuran horizontal gambar */
+  height: auto; /* Menggunakan "auto" untuk menjaga aspek rasio gambar */
+}
+
+.home-image-section {
+  max-width: 600px;
+  flex: 1;
+}
+.home-banner-container {
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  
+  
+}
+.home-text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.primary-heading {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #4c4c4c;
+  /* line-height: 5rem; */
+  max-width: 600px;
+}
+.primary-text {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  max-width: 500px;
+  color: #6a6a6a;
+  margin: 1.5rem 0rem;
+}
+.secondary-button {
+  padding: 1rem 2.5rem;
+  background-color: #AA72C3;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secondary-button svg {
+  margin-left: 0.75rem;
+  font-size: 1.5rem;
+}
+.secondary-button:hover {
+  background-color: #AA72C3;
+}
+.about-section-container {
+  margin-top: 10rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-background-image-container {
+  position: absolute;
+  left: -150px;
+  z-index: -2;
+}
+.about-section-image-container {
+  flex: 0.9;
+  margin-right: 1rem;
+}
+.about-section-text-container {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.course-primary-subheading {
+  margin-top: 15rem;
+  font-weight: 700;
+  color: #AA72C3;
+  font-size: 1.15rem;
+}
+.about-buttons-container {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.contact-page-wrapper h1 {
+  max-width: 900px !important;
+}
+.contact-page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact-form-container {
+  background-color: white;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5rem;
+}
+.contact-form-container input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+}
+.testimonials-container {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 200px; /* Tambahkan margin bawah sesuai kebutuhan Anda */
+}
+
+.testimonial {
+  text-align: center;
+}
+
+.footer-wrapper {
+  margin: 0rem 0rem;
+  display: flex;
+  margin-top: 10rem;
+  background-color: #9b5dc7; /* Ganti dengan warna latar belakang yang diinginkan */
+  padding: 4rem 0; /* Sesuaikan padding sesuai kebutuhan */
+  color: #ffffff; /* Warna teks putih */
+
+}
+.footer-logo-container {
+  max-width: 110px;
+}
+.footer-icons {
+  margin-top: 2.5rem;
+}
+.footer-icons svg {
+  font-size: 1.5rem;
+  margin-right: 1.20rem;
+  color: #ffffff;
+}
+/* .footer-section-one {
+  border: 2px solid blue;
+} */
+.footer-section-two {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-section-columns {
+  display: flex;
+  flex-direction: column;
+  min-width: 190px;
+}
+.footer-section-columns span {
+  margin: 1rem 0rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+.testimonial-section-bottom {
+  margin-top: 2rem;
+  background-color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 750px;
+  border-radius: 2rem;
+  flex-direction: column;
+  text-align: center;
+}
+.testimonial-section-bottom {
+  margin: 2rem auto;
+}
+.testimonial-section-bottom p {
+  font-weight: 700;
+  color: #515151;
+  max-width: 500px;
+  font-size: 1.1rem;
+  margin: 2rem 0rem;
+}
+.testimonials-stars-container svg {
+  margin: 0rem 0.25rem;
+  font-size: 1.5rem;
+  color: #ffe14b;
+}
+.testimonial-section-bottom h2 {
+  margin-top: 1.5rem;
+
+.testimonial-img {
+  width: 100%; /* Mengatur lebar gambar menjadi 100% */
+  max-width: 150px; /* Atur lebar maksimum sesuai kebutuhan */
+  border-radius: 50%; /* Menambahkan border-radius untuk membuat gambar lingkaran */
+}
+
+}
+.course-section-wrapper {
+  margin-top: 5rem;
+}
+.course-section-top p {
+  text-align: center;
+  max-width: 600px !important;
+}
+.course-section-top h1 {
+  max-width: 700px;
+  text-align: center; /* Mengatur teks di tengah */
+}
+.course-section-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.course-section-info {
+  width: 290px;
+  min-height: 350px;
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  color: #505050;
+  margin: 1rem 2rem;
+}
+.course-section-info h2 {
+  margin: 1rem 0rem;
+}
+.course-section-bottom {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.course-section-info p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+/* Gaya untuk bagian atas komponen Coach */
+.new-coach-section-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.coach-primary-subheading {
+  font-weight: 700;
+  color: #AA72C3;
+  font-size: 1.15rem;
+  margin-top: 5rem;
+
+}
+
+.new-primary-heading {
+  max-width: 700px;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #4c4c4c;
+}
+
+/* Gaya untuk komponen Coach */
+.new-coach-section-wrapper {
+  /* Atur gaya sesuai kebutuhan Anda */
+  margin-top: 5rem;
+}
+
+.new-coach-section-top p {
+  /* Atur gaya sesuai kebutuhan Anda */
+  text-align: center;
+  max-width: 600px !important;
+}
+
+.new-coach-section-top h1 {
+  /* Atur gaya sesuai kebutuhan Anda */
+  max-width: 700px;
+  text-align: center; /* Mengatur teks di tengah */
+}
+
+.new-coach-section-top {
+  /* Atur gaya sesuai kebutuhan Anda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.new-coach-section-info {
+  /* Atur gaya sesuai kebutuhan Anda */
+  width: 290px;
+  min-height: 350px;
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  color: #505050;
+  margin: 1rem 2rem;
+}
+
+.new-coach-section-info h2 {
+  /* Atur gaya sesuai kebutuhan Anda */
+  margin: 1rem 0rem;
+}
+
+.new-coach-section-bottom {
+  /* Atur gaya sesuai kebutuhan Anda */
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.new-coach-section-info p {
+  /* Atur gaya sesuai kebutuhan Anda */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.new-coach-rating {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.new-coach-rating span {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.rating-stars {
+  color: #ffc107; /* Warna bintang yang diisi */
+}
+
+.new-coach-price {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.new-add-to-cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #AA72C3; /* Warna tombol Add to Cart */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.new-add-to-cart-button i {
+  font-size: 1.2rem; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+  margin-left: 0.5rem;
+}
+
+
+/* Gaya untuk layar dengan lebar maksimal 1000px */
+@media (max-width: 1000px) {
+  .navbar-links-container a {
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  .primary-button {
+    font-size: 1rem;
+  }
+  .home-bannerImage-container {
+    max-width: 600px;
+  }
+}
+
+/* Gaya untuk layar dengan lebar maksimal 800px */
+@media (max-width: 800px) {
+  .nav-logo-container {
+    max-width: 140px;
+  }
+  .navbar-links-container {
+    display: none;
+  }
+  .navbar-menu-container {
+    display: flex;
+  }
+  .home-bannerImage-container {
+    max-width: 450px;
+  }
+  .home-banner-container,
+  .about-section-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-section-container {
+    flex-direction: column;
+  }
+  .home-image-section,
+  .about-section-image-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  .primary-heading {
+    text-align: center;
+    max-width: 90%;
+  }
+  .primary-text {
+    text-align: center;
+    max-width: 80%;
+  }
+  .home-text-section,
+  .about-section-text-container {
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  .secondary-button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+  }
+  .about-section-container {
+    margin-top: 5rem !important;
+  }
+  .about-buttons-container {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .primary-subheading {
+    text-align: center;
+  }
+  
+  .about-section-image-container {
+    margin-right: 0rem !important;
+  }
+  .course-section-wrapper {
+    margin-top: 5rem !important;
+  }
+  .course-section-bottom {
+    margin-top: 1rem !important;
+  }
+  .contact-form-container {
+    padding: 0.5rem !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem !important;
+  }
+  .contact-form-container input {
+    font-size: 1rem !important;
+    max-width: 100%;
+    padding: 0.5rem 1rem !important;
+    margin-bottom: 0.8rem !important;
+    text-align: center;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-section-two {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .footer-section-columns {
+    margin: 1rem 0rem;
+  }
+  .App {
+    max-width: 95vw;
+  }
+}
+
+/* Gaya untuk layar dengan lebar maksimal 600px */
+@media (max-width: 600px) {
+  .home-bannerImage-container,
+  .about-background-image-container {
+    display: none;
+  }
+}
+/* Container untuk form */
+.form-container-img {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("assets/background.png");
+  background-size: cover; /* Untuk mengisi area background dengan gambar */
+  background-repeat: no-repeat; /* Untuk mencegah pengulangan gambar */
+  background-attachment: fixed; 
+}
+
+/* Box untuk form */
+.form-box {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Judul "SignIn" */
+.form-box h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+/* Teks "Belum Registrasi?" */
+.form-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+
+}
+
+/* Input User ID dan Password */
+.form-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+/* Tambahkan margin-bottom untuk tombol "Sign Up" */
+.w-100.mt-3 {
+  margin-bottom: 1rem; /* Atur jarak margin bottom sesuai kebutuhan */
+}
+
+/* Tambahkan margin-top untuk tombol "Sign Up with Google" */
+.google-button {
+  margin-top: 1rem; /* Atur jarak margin top sesuai kebutuhan */
+}
+
+/* Tombol SignIn */
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #AA72C3; /* Warna tombol sesuai kebutuhan */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+/* Teks "Belum Registrasi?" diubah menjadi link */
+.form-box p a {
+  color: #AA72C3; /* Warna link sesuai kebutuhan */
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+/* SplashScreen.css */
+
+.splash-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Ganti dengan warna latar belakang yang Anda inginkan */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.Logo {
+  width: 200px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+  height: 200px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+  /* Jika ingin mengatur posisi logo, gunakan properti CSS seperti top, left, right, atau bottom */
+  /* contoh: top: 20px; left: 20px; */
+}
+/* Di dalam file CSS Anda atau di dalam styling komponen */
+.btn-purple {
+  background-color: #AA72C3;
+  color: #ffffff; /* Warna teks */
+  border-radius: 30px; /* Atur radius border sesuai keinginan */
+  padding: 10px 20px; /* Sesuaikan padding sesuai keinginan */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Efek transisi warna */
+}
+
+.btn-purple:hover,
+.btn-purple:focus {
+  background-color: #8C58A3; /* Warna saat hover atau focus */
+  color: #fff; /* Warna teks pada hover atau focus tetap putih */
+}
+
+.btn-custom {
+  background-color: #AA72C3;
+  border-color: #AA72C3;
+  color: white;
+}
+.btn-custom.active {
+  background-color: darkpurple;
+  border-color: darkpurple;
+}
+/* Dalam file CSS Anda atau di dalam styling komponen */
+
+.body-flex-signup {
+  background-color: #AA72C3; /* Warna latar belakang */
+  height: 100vh; /* Sesuaikan dengan kebutuhan Anda */
+  display: flex;
+  flex-direction: column; /* Menata elemen anak secara vertikal */
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-signup {
+  margin-top: 100px; /* Jarak antara navbar dan form */
+  width: 100%;
+  display: flex;
+  border-radius: 100px; /* Atur radius border sesuai keinginan */
+  justify-content: center;
+}
+
+.col-10-signup {
+  background-color: #fff; /* Warna latar belakang konten */
+  padding: 20px;
+  border-radius: 10px; /* Atur radius border sesuai keinginan */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Sesuaikan lebar formulir sesuai kebutuhan */
+  width: 100%;
+}
+
+/* Gaya tambahan untuk memperindah tampilan tombol */
+.btn-signup {
+  background-color: #AA72C3; /* Warna tombol ungu */
+  color: #fff; /* Warna teks putih */
+  border: none; /* Hapus border jika tidak diperlukan */
+  width: 100%; /* Tombol mengisi lebar formulir */
+  margin-top: 10px; /* Jarak antara tombol dan formulir */
+}
+
+.btn-signup:hover {
+  background-color: #8C58A3; /* Warna tombol ungu saat hover */
+}

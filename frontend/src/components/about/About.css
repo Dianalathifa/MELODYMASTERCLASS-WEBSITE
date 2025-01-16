@@ -1,0 +1,39 @@
+/* About.css */
+.subscription-card {
+    border: 1px solid #AA72C3;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .subscription-card h3 {
+    color: #333;
+  }
+  
+  .subscription-card p {
+    color: #AA72C3;
+  }
+  
+  .subscription-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .subscription-card li {
+    color: #666;
+  }
+  
+  .subscription-card button {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .subscription-card button:hover {
+    background-color: #495057;
+  }
+  

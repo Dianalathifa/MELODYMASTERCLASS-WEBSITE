@@ -1,0 +1,43 @@
+/* styles.css */
+.body-flex-formpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .flex-formpage {
+    width: 100%;
+  }
+  
+  .col-10-formpage {
+    max-width: 800px; /* Sesuaikan sesuai kebutuhan */
+    margin: auto;
+  }
+  
+  .p-5 {
+    padding: 5rem;
+  }
+  
+  .py-1-formpage{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-black {
+    color: black;
+  }
+  
+  .bg {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .form-container {
+  padding: 100px; /* Sesuaikan sesuai kebutuhan */
+}
+  /* Tambahkan warna dan properti styling lainnya sesuai kebutuhan */
+  
